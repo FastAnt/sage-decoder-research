@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Can an LLM edit a neural audio codec for one song? Weight-space pruning and patching of a SAGE decoder"
+authors:
+  - family-names: "Rukin"
+    given-names: "Artem"
+    alias: "FastAnt"
+year: 2026
+url: "https://github.com/FastAnt/sage-decoder-research"
+license: MIT
+type: software
+abstract: >-
+  We study whether GPT-6 Astra can structurally prune the SAGE neural audio codec decoder for a
+  single track and repair the resulting quality loss with a small shippable weight delta.

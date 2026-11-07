@@ -1,0 +1,137 @@
+/home/mercedes/dev/decoder_refactor/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+/home/mercedes/dev/decoder_refactor/.venv/lib/python3.12/site-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4317.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[PRE-TRANSFORM] PowerMagnitudeTransform (applied on encode/decode/target)
+[CHECKPOINT] Loaded autoencoder weights from EMA
+[CHECKPOINT] varlen=tri2 on 4 collapsed blocks
+[CHECKPOINT] sdpa attention on 20 attention modules
+[CHECKPOINT] Loaded checkpoint: 
+/home/mercedes/dev/decoder_refactor/vendor/SAGE/models/SAGE_FTe992.ckpt
+{
+ "base": {
+  "tag": "base",
+  "params_m": 52.32,
+  "gflop_per_s": 28.83,
+  "decode_s_gpu": 2.62,
+  "mel_db": 0.1374
+ },
+ "removal_curve": [
+  {
+   "tag": "-1 stage0",
+   "params_m": 38.65,
+   "gflop_per_s": 25.67,
+   "decode_s_gpu": 1.59,
+   "mel_db": 0.218
+  },
+  {
+   "tag": "-2 stage0",
+   "params_m": 24.99,
+   "gflop_per_s": 22.51,
+   "decode_s_gpu": 1.51,
+   "mel_db": 1.1682
+  },
+  {
+   "tag": "-2s0 -2s1",
+   "params_m": 18.14,
+   "gflop_per_s": 17.63,
+   "decode_s_gpu": 1.29,
+   "mel_db": 1.0647
+  },
+  {
+   "tag": "-2s0 -4s1",
+   "params_m": 11.29,
+   "gflop_per_s": 12.75,
+   "decode_s_gpu": 1.14,
+   "mel_db": 0.6219
+  },
+  {
+   "tag": "-2s0 -6s1",
+   "params_m": 4.44,
+   "gflop_per_s": 7.86,
+   "decode_s_gpu": 0.96,
+   "mel_db": 0.6851
+  },
+  {
+   "tag": "-2s0 -6s1 -1s2",
+   "params_m": 3.58,
+   "gflop_per_s": 5.33,
+   "decode_s_gpu": 0.74,
+   "mel_db": 1.053
+  }
+ ],
+ "astra_plan": {
+  "tag": "astra_plan",
+  "params_m": 27.52,
+  "gflop_per_s": 15.82,
+  "decode_s_gpu": 1.1,
+  "mel_db": 0.2072
+ },
+ "delta_frontier": [
+  {
+   "tag": "lowrank1",
+   "params_m": 27.52,
+   "gflop_per_s": 15.82,
+   "decode_s_gpu": 1.08,
+   "mel_db": 0.1696,
+   "delta_kib": 118.8
+  },
+  {
+   "tag": "lowrank2",
+   "params_m": 27.52,
+   "gflop_per_s": 15.82,
+   "decode_s_gpu": 1.09,
+   "mel_db": 0.1689,
+   "delta_kib": 232.0
+  },
+  {
+   "tag": "lowrank4",
+   "params_m": 27.52,
+   "gflop_per_s": 15.82,
+   "decode_s_gpu": 1.11,
+   "mel_db": 0.1525,
+   "delta_kib": 458.8
+  },
+  {
+   "tag": "full_finetune_delta",
+   "params_m": 27.52,
+   "gflop_per_s": 15.82,
+   "decode_s_gpu": 1.1,
+   "mel_db": 0.1465,
+   "delta_kib": 53743
+  }
+ ],
+ "astra_patch": {
+  "tag": "astra_patch",
+  "params_m": 27.52,
+  "gflop_per_s": 15.82,
+  "decode_s_gpu": 1.09,
+  "mel_db": 0.2063,
+  "delta_kib": 0.6
+ },
+ "calib_clean": {
+  "tag": "clean",
+  "params_m": 52.32,
+  "gflop_per_s": null,
+  "decode_s_gpu": 1.67,
+  "mel_db": 0.147
+ },
+ "calib_defect": {
+  "tag": "defect",
+  "params_m": 52.32,
+  "gflop_per_s": null,
+  "decode_s_gpu": 1.66,
+  "mel_db": 0.1461
+ },
+ "calib_repaired": {
+  "tag": "repaired",
+  "params_m": 52.32,
+  "gflop_per_s": null,
+  "decode_s_gpu": 1.66,
+  "mel_db": 0.1428
+ }
+}
